@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Weaver</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 300px;
+            padding: 16px;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .logo {
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 16px;
+            background-color: #3498db; /* Placeholder for logo */
+            border-radius: 50%;
+        }
+        textarea, input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .divider {
+            height: 1px;
+            background-color: #bdc3c7;
+            margin: 16px 0;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"></div>
+        <h1>Text Weaver</h1>
+        <textarea id="text-input" placeholder="Enter your text snippet here..."></textarea>
+        <input type="text" id="text-name" placeholder="Name your snippet">
+        <button id="save-button">Save Snippet</button>
+        
+        <div class="divider"></div>
+        
+        <select id="text-select">
+            <option value="">Select a snippet</option>
+        </select>
+        <button id="insert-button">Weave Selected Text</button>
+    </div>
+    <div class="footer">
+        Weave your words, anywhere you type
+    </div>
+    <script src="popup.js" type="module"></script>
+</body>
+</html>

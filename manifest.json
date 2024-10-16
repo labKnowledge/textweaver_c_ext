@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Text Weaver",
+  "version": "1.3",
+  "description": "Text Weaver is a powerful Chrome extension that allows you to seamlessly insert pre-saved text snippets into any editable field on the web. Like a master weaver at a loom, you can now intricately weave your frequently used phrases, complex terminology, or boilerplate text into your digital tapestry with just a few clicks.",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
